@@ -12,23 +12,16 @@
 1. navigation과 Fragment 기능을 이용하여 Home_fragment에서 4분할로 D-day Calendar, MemoPad, StopWatch, Diary 의 미리보기 화면이 보이게 함.
 2. 각 Fragment의 Layout(혹은 Button)을 클릭 시 각각의 메인 Fragment로 이동. 더 크고 관리하기 쉬운 화면으로 이용 가능하게.
 
-    - Home_Fragment에서 다른 Fragment로 이동 후 다시 Fragment를 종료할때
+    -- Home_Fragment에서 다른 Fragment로 이동 후 다시 Fragment를 종료할때 Fragment의 생명주기가 끝나버리는 문제 발생.
 
+    **Fragment의 생명주기 함수를 override하여 onStop()이나 onDestory()의 시기를 바꾸는 방법 등을 찾아봐야 할듯.
 
-content
+1. activity_main.xml 에서 Layout을 4분할하여 4개의 Activity의 Layout(혹은 Button)을 눌렀을 때 해당 Layout이 기기의 전체를 덮도록 해보자.
+    -- ImageView 를 확대하는 방법 밖에 찾지 못했다. 더 찾아봐야할 듯.
 
-1. nub1
-
-
-- list1
-- list2
-
-
-> 인용구
-
-```kotlin
-def fucntion(a):
-    pring(a)
-    return a
-```
+### ++ 이외 추가해야할 사항
+D-day Calendar 앱을 왼쪽 상단에 추가. 
+오른쪽 상단 NotePad에 편집 기능 추가, 작성 시 더 편리하게 만들기(작성 공간을 늘리고 텍스트 옆에 작은 버튼을 두어 클릭시 해당 텍스트에 취소선 긋기 등).
+ 오른쪽 하단에 Diary에는 StopWatch에서 공부한 시간과 NotePad에서 마무리한 일(취소선 그은 일)들이 자동으로 업데이트되도록 추가. 
+현재 익명 Auth으로 되어있는 것을 FireBase 등을 이용해 Google 연동, 허용한 친구들이 허용한 범위만큼 공유할 수 있도록 하기
 
